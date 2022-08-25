@@ -2,24 +2,45 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Chief Data Scientist at <a href="https://medius.si">Medius d.o.o.</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: tj.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Tehnološki park 21</p>
+    <p>Ljubljana, Slovenia</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false  # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I work at [Medius](https://medius.si), Slovenian based company specialised for
+custom software development as chief data scientist. I started my studies with
+the electrical engineering program at the University of Ljubljana in 2002.
+I enrolled into Master study course covering fields of Automation and
+Intelligent systems. During my studies I was mainly interested in developing
+automated artificial system with the help of data mining related tasks. After
+completing an MSc in 2009, I enrolled into a PhD program at the same
+University. My main interest remained the same, strongly related with the field
+of pattern recognition. I focused in speech related technologies, such as
+emotional recognition from speech, emotional and cross-lingual parametric
+speech synthesis. You can check work and publications on one of the well known
+research profiles as
+[ResearchGate](https://www.researchgate.net/profile/Tadej-Justin) or [Google
+Scholar](https://scholar.google.com/citations?hl=en&user=405SSpEAAAAJ). During
+my studies and research, I started and co funded micro company for consulting
+and development web based applications in Python, using solutions as CMS Plone,
+and frameworks like [Pyramid](https://trypyramid.com/) or
+[Flask](https://flask.palletsprojects.com/). Because of my studies of
+automation courses, I was always interested in field of Continuous Deployment
+and Continues Integrations, in other words - in DevOps. Since the era of
+Kubernetes I followed its progress and evaluation and in the end of 2019
+I successfully certified as [Kubernetes
+Administrator](https://www.youracclaim.com/badges/5a5265c2-a855-4524-8195-94a287da6725).
+All the knowledge obtained from the DevOps field I constantly use in daily work,
+helping me and my team deliver software enhanced with predictive
+functionalities seamlessly to production. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
