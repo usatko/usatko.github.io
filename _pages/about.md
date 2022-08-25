@@ -23,7 +23,7 @@ degree in Electrical Engineering at the University of Ljubljana in 2009.
 I enrolled into a master’s study course covering the fields of Automation and
 Intelligent systems. During my studies I was mainly interested in developing
 artificial intelligent systems based on machine learning and data mining. After
-completing MSc in 2009, I enrolled into a PhD program at the same University.
+completing MSc, I enrolled into a PhD program at the same University.
 My main research interest was strongly related to the field of pattern
 recognition, more specifically, I focused on speech related technologies, such
 as emotional recognition from speech, and emotional and cross-lingual
