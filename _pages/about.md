@@ -32,8 +32,8 @@ parametric speech synthesis. You can find my work and publications on
 Scholar](https://scholar.google.com/citations?hl=enGoogle
 Scholaruser=405SSpEAAAAJ). During my studies and research, I started and
 co-founded a micro company for consulting and development of web-based
-applications in Python, using solutions such as Plone CMS and frameworks like
-[Pyramid](https://trypyramid.com/) or
+applications in Python, using solutions such as [Plone CMS](https://plone.org/)
+and frameworks like [Pyramid](https://trypyramid.com/) or
 [Flask](https://flask.palletsprojects.com/). Thanks to my studies in
 Automation, I retained my fascination with the field of Continuous Deployment
 and Continuous Integrations, in other words, with DevOps. Since the start of
