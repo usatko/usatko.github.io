@@ -22,5 +22,5 @@ jobs:
         source_repo: "https://${{ secrets.ACCESS_TOKEN }}@github.com/usatko/al-folio/tree/gh-pages"
         source_branch: "gh-pages"
         destination_branch: "gh-pages"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ env.ACCESS_TOKEN }}
         
