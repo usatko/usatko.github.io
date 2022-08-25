@@ -19,7 +19,7 @@ jobs:
     - name: repo-sync
       uses: repo-sync/github-sync@v2
       with:
-        source_repo: "https://${env.access_token}@github.com/usatko/al-folio/tree/gh-pages"
+        source_repo: "https://${{ env.access_token }}@github.com/usatko/al-folio/tree/gh-pages"
         source_branch: "gh-pages"
         destination_branch: "gh-pages"
-        github_token: ${{ env.access_token }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
