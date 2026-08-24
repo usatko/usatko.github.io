@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Dr. Tadej Justin — Sunsei by Medius">
+  <title>Dr. Tadej Justin · Sunsei</title>
+  <style>
+    :root {
+      --navy: #003f99;
+      --navy-soft: #eaf2ff;
+      --blue: #0046aa;
+      --amber: #ff7869;
+      --coral: #ff7869;
+      --white: #ffffff;
+      --muted: #667085;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: #f3f7ff; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      color: var(--navy);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(255,120,105,.16), transparent 32rem),
+        radial-gradient(circle at 100% 92%, rgba(0,70,170,.13), transparent 30rem),
+        #f3f7ff;
+      display: grid;
+      place-items: center;
+      padding: max(24px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
+    }
+
+    .card {
+      width: min(100%, 430px);
+      position: relative;
+      overflow: hidden;
+      padding: 28px 22px 22px;
+      border: 1px solid rgba(0,70,170,.12);
+      border-radius: 30px;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 30px 80px rgba(0,45,110,.16);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      right: -92px;
+      top: -104px;
+      background: var(--coral);
+      opacity: .13;
+    }
+
+    .card-header {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      display: block;
+      width: 141px;
+      height: 48px;
+      max-width: none;
+    }
+
+    .qr {
+      margin: 0;
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+    }
+
+    .qr img {
+      display: block;
+      width: 88px;
+      height: 88px;
+      padding: 5px;
+      border: 1px solid rgba(0,70,170,.13);
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(0,45,110,.12);
+      image-rendering: crisp-edges;
+    }
+
+    .qr figcaption {
+      color: var(--muted);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      position: relative;
+      text-align: center;
+      margin: 16px 0 22px;
+    }
+
+    .photo-wrap {
+      width: 108px;
+      height: 108px;
+      margin: 0 auto 18px;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral), var(--blue));
+      box-shadow: 0 12px 35px rgba(0,45,110,.2);
+    }
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 9vw, 2.6rem);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .role {
+      margin: 10px 0 0;
+      color: var(--blue);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .role a { color: inherit; text-decoration: none; }
+
+    .links { display: grid; gap: 12px; }
+
+    .link {
+      min-height: 60px;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr) 20px;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border: 1px solid rgba(0,70,170,.12);
+      border-radius: 18px;
+      color: var(--navy);
+      background: #f8fbff;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .link:active { transform: scale(.985); }
+    .link:hover, .link:focus-visible {
+      border-color: rgba(0,70,170,.48);
+      background: #eef5ff;
+      outline: none;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: rgba(255,120,105,.13);
+      color: var(--coral);
+    }
+
+    .linkedin .icon { background: rgba(0,70,170,.1); color: var(--blue); }
+    .product .icon { background: transparent; }
+    .product-logo { width: 42px; height: 42px; overflow: hidden; }
+    .product-logo img { display: block; width: 123px; height: 42px; max-width: none; }
+    .icon svg { width: 21px; height: 21px; }
+
+    .label { min-width: 0; }
+    .label small { display: block; margin-bottom: 3px; color: var(--muted); font-size: .7rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+    .label strong { display: block; overflow: hidden; font-size: .9rem; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+    .arrow { color: var(--muted); font-size: 1.25rem; }
+
+    @media (min-width: 600px) {
+      .card { padding: 34px 30px 28px; }
+      .intro { margin-top: 20px; }
+    }
+
+    @media (max-height: 700px) {
+      body { padding: max(10px, env(safe-area-inset-top)) 12px max(10px, env(safe-area-inset-bottom)); }
+      .card { padding: 18px 18px 16px; border-radius: 24px; }
+      .qr img { width: 76px; height: 76px; }
+      .intro { margin: 8px 0 14px; }
+      .photo-wrap { width: 82px; height: 82px; margin-bottom: 10px; }
+      h1 { font-size: 2rem; }
+      .role { margin-top: 7px; }
+      .links { gap: 8px; }
+      .link { min-height: 54px; padding: 6px 12px; }
+      .icon { width: 38px; height: 38px; }
+      .product-logo { width: 38px; height: 38px; }
+      .product-logo img { width: 111px; height: 38px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { .link { transition: none; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-header">
+      <a class="brand" href="https://sunsei.ai" target="_blank" rel="noopener noreferrer" aria-label="Sunsei home">
+        <span class="brand-logo"><img src="sunsei-logo.png" alt="Sunsei" width="492" height="168"></span>
+      </a>
+      <figure class="qr">
+        <img src="QR.PNG" alt="QR code for this business card page" width="1668" height="1668">
+        <figcaption>Open this card</figcaption>
+      </figure>
+    </header>
+    <section class="intro" aria-labelledby="name">
+      <div class="photo-wrap"><img class="photo" src="profile_photo.jpg"
+          alt="Dr. Tadej Justin" width="200" height="200"></div>
+      <h1 id="name">Dr. Tadej Justin</h1>
+      <p class="role"><a href="https://sunsei.ai" target="_blank" rel="noopener noreferrer">Sunsei</a> · <a href="https://medius.si" target="_blank" rel="noopener noreferrer">Medius</a></p>
+    </section>
+
+    <nav class="links" aria-label="Contact and product links">
+      <a class="link" href="mailto:tadej.justin@medius.si">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+        <span class="label"><small>Email</small><strong>tadej.justin@medius.si</strong></span><span class="arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link linkedin" href="https://www.linkedin.com/in/tadej-justin-phd" target="_blank" rel="noopener noreferrer">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.3H3.2V19h3.3V8.3ZM4.8 3a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8Zm7 5.3H8.7V19H12v-5.3c0-1.4.3-2.8 2-2.8s1.8 1.6 1.8 2.9V19H19v-5.9c0-2.9-.6-5.1-4-5.1-1.6 0-2.7.9-3.2 1.7V8.3Z"/></svg></span>
+        <span class="label"><small>LinkedIn</small><strong>Connect with me</strong></span><span class="arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link product" href="https://sunsei.ai" target="_blank" rel="noopener noreferrer">
+        <span class="icon product-logo"><img src="sunsei-logo.png" alt="" width="492" height="168"></span>
+        <span class="label"><small>Solar power forecasting</small><strong>sunsei.ai</strong></span><span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </nav>
+
+  </main>
+</body>
+</html>
